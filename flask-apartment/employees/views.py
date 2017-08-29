@@ -36,7 +36,7 @@ def add_employee():
 
 @employee_app.route('/groups', methods=['POST'])
 def make_groups():
-    print('group is called')
+
     mia = request.json.get('mia', [])
 
     employees = json.loads(Employee.objects.all().to_json())
@@ -46,15 +46,16 @@ def make_groups():
 
     # shuffle people
     shuffle(present_employees)
+
     # devide them into groups
     emp_size = len(present_employees)
     floor_division = emp_size // 5
     # if you can divide by 5, everybody can fit into that number, otherwise, add 1
     indices_or_sections = floor_division if emp_size % 5 == 0 else  floor_division + 1
     nparrays = np.array_split(present_employees, indices_or_sections)
+
     # convert np array to list
-    groups = []
-    for a in nparrays:
-        groups.append(a.tolist())
+    groups = list(map(lambda a: a.tolist(), nparrays))
+
 
     return json.dumps({'success': True, 'data': {'groups': groups, 'size': len(present_employees)}})

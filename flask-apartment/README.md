@@ -18,6 +18,8 @@ Flask (backend restAPI) application.
 
     nosetests
 
+Please make sure mongodb is up and running before running tests
+
 # To install/start Mongodb and add some sample data:
 
     cd ../utils
