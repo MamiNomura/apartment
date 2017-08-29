@@ -21,7 +21,7 @@
     "eslint-config-rallycoding": "^3.2.0",
     "jquery": "^2.2.1",
     "jsdom": "^8.1.0",
-    "mocha": "^2.4.5",
+    "mocha": "^3.5.0",
     "react-addons-test-utils": "^0.14.7",
     "redux-devtools-extension": "^2.13.2",
     "webpack": "^1.15.0",
@@ -40,7 +40,6 @@
     "redux": "^3.0.4",
     "redux-form": "^7.0.3",
     "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1",
-    "webpack": "^1.15.0"
+    "reselect": "^3.0.1"
   }
 }
