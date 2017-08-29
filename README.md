@@ -1,7 +1,9 @@
 Sample project using react and flask
 =============
 
-This app consists of front end react app and restful API flask app using mongodb as database layer.
+This sample project consists of two parts:
+* A front end react app
+* A flask app serving restful API, uses mongodb as database layer.
 
 To run mobodb and flask app, please look at the README of flask-apartment project
 
